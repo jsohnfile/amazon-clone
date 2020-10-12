@@ -9,8 +9,8 @@ function Home() {
                 <img className="home__image" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="" />
                 
                 <div className="home__row">
-                    <Product id="12321341" title="The Lean Startup: How Constant Innovation Creates Radically SUccessful Businesses Paperback" price={29.99} image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg" rating={5}/>
-                    <Product id="49538094" title="Cuisinart SM-50TQ Stand Mixer, Turquoise" price={199.95} rating={4} image="https://m.media-amazon.com/images/I/51x5TWsDQUL._AC_UL320_.jpg"/>
+                    <Product id="12321341" title="Apple iPad (10.2-Inch, Wi-Fi, 32GB) - Space Gray (Latest Model) (Renewed)" price={344.99} rating={5} image="https://m.media-amazon.com/images/I/61mXrcMU6LL._AC_UY436_FMwebp_QL65_.jpg"/>
+                    <Product id="49538094" title="CNew Apple Watch Series 6 (GPS, 40mm) - Silver Aluminum Case with White Sport Band" price={384.99} rating={4} image="https://m.media-amazon.com/images/I/71enijH9gUL._AC_UL640_FMwebp_QL65_.jpg"/>
                 </div>
                 
                 <div className="home__row">
