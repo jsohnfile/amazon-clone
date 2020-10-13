@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Product from "./Product";
+import { motion } from "framer-motion";
 
 function Home() {
     return (
@@ -21,7 +22,7 @@ function Home() {
                 </div>
                
                 <div className="home__row">
-                    <Product title="Dell XPS 15 7590 Laptop 15.6 inch, 4K UHD OLED InfinityEdge, 9th Gen Intel Core i7-9750H, NVIDIA GeForce GTX 1650 4GB GDDR5, 256GB SSD, 16GB RAM, Windows 10 Home, XPS7590-7572SLV-PUS, 15-15.99 inches" price={1690.43} image="https://m.media-amazon.com/images/I/91WgL3IbNIL._AC_UY436_FMwebp_QL65_.jpg" rating={4}/>
+                    <Product id="2395729" title="Dell XPS 15 7590 Laptop 15.6 inch, 4K UHD OLED InfinityEdge, 9th Gen Intel Core i7-9750H, NVIDIA GeForce GTX 1650 4GB GDDR5, 256GB SSD, 16GB RAM, Windows 10 Home, XPS7590-7572SLV-PUS, 15-15.99 inches" price={1690.43} image="https://m.media-amazon.com/images/I/91WgL3IbNIL._AC_UY436_FMwebp_QL65_.jpg" rating={4}/>
 
                 </div>
             

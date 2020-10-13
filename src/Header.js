@@ -5,6 +5,7 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
+import userEvent from "@testing-library/user-event";
 
 function Header() {
     const [{basket, user}, dispatch] = useStateValue();
@@ -27,14 +28,14 @@ function Header() {
                 <Link to={!user && "/login"}>
                     <div onClick={handleAuthentication} className="header__option">
                         <span className="header__optionLineOne">
-                            Hello
+                            Hello {!user ? 'Guest' : user.email}
                         </span>
                         <span className="header__optionLineTwo">
                             {user ? 'Sign Out' : 'Sign In'} 
                         </span>
                     </div>
                 </Link>
-
+                <Link to='/orders'>
                 <div className="header__option">
                     <span className="header__optionLineOne">
                         Returns
@@ -44,6 +45,7 @@ function Header() {
                     </span>
                     
                 </div>
+                </Link>
 
                 <div className="header__option">
                     <span className="header__optionLineOne">
