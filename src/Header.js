@@ -5,7 +5,7 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
-import userEvent from "@testing-library/user-event";
+import { motion } from "framer-motion";
 
 function Header() {
     const [{basket, user}, dispatch] = useStateValue();
@@ -18,7 +18,7 @@ function Header() {
     return (
         <div className="header">
             <Link to="/">
-                <img className="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" />
+                <motion.img whileHover={{scale: 1.1}} className="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" />
             </Link>
             <div className="header__search">
                 <input className="header__searchInput" type="text"/>
@@ -26,17 +26,17 @@ function Header() {
             </div>
             <div className="header__nav">
                 <Link to={!user && "/login"}>
-                    <div onClick={handleAuthentication} className="header__option">
+                    <motion.div whileHover={{scale: 1.1}} onClick={handleAuthentication} className="header__option">
                         <span className="header__optionLineOne">
                             Hello {!user ? 'Guest' : user.email}
                         </span>
                         <span className="header__optionLineTwo">
                             {user ? 'Sign Out' : 'Sign In'} 
                         </span>
-                    </div>
+                    </motion.div>
                 </Link>
                 <Link to='/orders'>
-                <div className="header__option">
+                <motion.div whileHover={{scale: 1.1}} className="header__option">
                     <span className="header__optionLineOne">
                         Returns
                     </span>
@@ -44,7 +44,7 @@ function Header() {
                         & Orders
                     </span>
                     
-                </div>
+                </motion.div>
                 </Link>
 
                 <div className="header__option">
@@ -58,10 +58,10 @@ function Header() {
                 </div>
 
                 <Link to="/checkout">
-                    <div className="header__optionBasket">
+                    <motion.div whileHover={{scale: 1.1}} className="header__optionBasket">
                         <ShoppingBasketIcon />
                         <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
-                    </div>
+                    </motion.div>
                     </Link>
 
 

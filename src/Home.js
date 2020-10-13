@@ -1,7 +1,6 @@
 import React from 'react';
 import './Home.css';
 import Product from "./Product";
-import { motion } from "framer-motion";
 
 function Home() {
     return (
